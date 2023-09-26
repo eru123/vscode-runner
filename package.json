@@ -12,10 +12,33 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "runner.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "runner.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "runner.new_task",
+        "title": "Runner: Create new task"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "tasks",
+          "title": "Tasks",
+          "icon": "resources/skiddph-logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "tasks": [
+        {
+          "id": "tasks-list",
+          "name": "List"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
